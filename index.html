@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --bg: #0d0d0d;
       --surface: #141414;
@@ -21,9 +21,9 @@
       --mono: 'DM Mono', monospace;
       --sans: 'Instrument Sans', sans-serif;
     }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       background: var(--bg);
       color: var(--text);
@@ -31,7 +31,7 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-
+ 
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -44,7 +44,7 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
-
+ 
     .nav-logo {
       font-family: var(--mono);
       font-size: 0.85rem;
@@ -52,13 +52,13 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
-
+ 
     .nav-links {
       display: flex;
       gap: 2rem;
       list-style: none;
     }
-
+ 
     .nav-links a {
       font-family: var(--mono);
       font-size: 0.75rem;
@@ -68,9 +68,9 @@
       text-transform: uppercase;
       transition: color 0.2s;
     }
-
+ 
     .nav-links a:hover { color: var(--accent); }
-
+ 
     #hero {
       min-height: 100vh;
       display: grid;
@@ -78,7 +78,7 @@
       position: relative;
       overflow: hidden;
     }
-
+ 
     .hero-left {
       display: flex;
       flex-direction: column;
@@ -87,7 +87,7 @@
       position: relative;
       z-index: 2;
     }
-
+ 
     .hero-tag {
       font-family: var(--mono);
       font-size: 0.72rem;
@@ -99,7 +99,7 @@
       align-items: center;
       gap: 0.6rem;
     }
-
+ 
     .hero-tag::before {
       content: '';
       display: inline-block;
@@ -107,7 +107,7 @@
       height: 1px;
       background: var(--accent);
     }
-
+ 
     h1 {
       font-family: var(--serif);
       font-size: clamp(3rem, 5vw, 5.5rem);
@@ -115,9 +115,9 @@
       margin-bottom: 1.5rem;
       color: var(--text);
     }
-
+ 
     h1 em { font-style: italic; color: var(--accent); }
-
+ 
     .hero-desc {
       font-size: 1.05rem;
       color: var(--muted);
@@ -125,9 +125,9 @@
       max-width: 420px;
       margin-bottom: 2.5rem;
     }
-
+ 
     .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
-
+ 
     .btn-primary {
       background: var(--accent);
       color: #0d0d0d;
@@ -143,9 +143,9 @@
       transition: transform 0.2s, background 0.2s;
       display: inline-block;
     }
-
+ 
     .btn-primary:hover { transform: translate(-2px, -2px); background: #d9ff5e; }
-
+ 
     .btn-outline {
       background: transparent;
       color: var(--text);
@@ -159,13 +159,13 @@
       transition: border-color 0.2s, color 0.2s;
       display: inline-block;
     }
-
+ 
     .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-
+ 
     .hero-right { position: relative; display: flex; align-items: center; justify-content: center; }
-
+ 
     .hero-graphic { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-
+ 
     .grid-bg {
       position: absolute; inset: 0;
       background-image:
@@ -174,7 +174,7 @@
       background-size: 40px 40px;
       opacity: 0.4;
     }
-
+ 
     .hero-circle {
       width: 340px; height: 340px;
       border-radius: 50%;
@@ -182,7 +182,7 @@
       position: relative;
       animation: spin 20s linear infinite;
     }
-
+ 
     .hero-circle::before {
       content: '';
       position: absolute;
@@ -192,7 +192,7 @@
       border-radius: 50%;
       transform: translateX(-50%);
     }
-
+ 
     .hero-inner {
       position: absolute; inset: 40px;
       border-radius: 50%;
@@ -200,7 +200,7 @@
       display: flex; align-items: center; justify-content: center;
       animation: spin 15s linear infinite reverse;
     }
-
+ 
     .hero-core {
       width: 140px; height: 140px;
       background: var(--surface2);
@@ -215,27 +215,27 @@
       line-height: 1.6;
       animation: none;
     }
-
+ 
     @keyframes spin { to { transform: rotate(360deg); } }
-
+ 
     .hero-stats {
       position: absolute;
       bottom: 3rem; left: 5rem;
       display: flex; gap: 3rem;
       z-index: 2;
     }
-
+ 
     .stat-num { font-family: var(--serif); font-size: 2rem; color: var(--accent); display: block; }
     .stat-label { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
-
+ 
     section { padding: 6rem 5rem; border-top: 1px solid var(--border); }
-
+ 
     .section-header { display: flex; align-items: baseline; gap: 1.5rem; margin-bottom: 4rem; }
     .section-num { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.12em; }
-
+ 
     h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.1; color: var(--text); }
     h2 em { font-style: italic; color: var(--accent); }
-
+ 
     #about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -244,13 +244,13 @@
       padding: 6rem 5rem;
       border-top: 1px solid var(--border);
     }
-
+ 
     .about-left .section-header { margin-bottom: 2rem; }
-
+ 
     .about-text { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 1.5rem; }
-
+ 
     .skills-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
-
+ 
     .skill-tag {
       font-family: var(--mono);
       font-size: 0.7rem;
@@ -260,34 +260,34 @@
       padding: 0.3rem 0.8rem;
       opacity: 0.8;
     }
-
+ 
     .cv-card { background: var(--surface); border: 1px solid var(--border); padding: 2.5rem; }
     .cv-card h3 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 0.5rem; }
     .cv-subtitle { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
-
+ 
     .cv-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 0.8rem 0; border-bottom: 1px solid var(--border); }
     .cv-row:last-of-type { border-bottom: none; }
     .cv-row-label { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; flex: 0 0 100px; }
     .cv-row-val { font-size: 0.9rem; color: var(--text); flex: 1; text-align: right; }
     .cv-download { margin-top: 2rem; display: block; text-align: center; }
-
+ 
     #pitch { background: var(--surface); }
-
+ 
     .video-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: center; }
-
+ 
     .video-info h3 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 1rem; }
     .video-info p { color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
-
+ 
     .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 1px solid var(--border); }
     .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
+ 
     .video-placeholder {
       aspect-ratio: 16/9;
       background: var(--surface2);
       border: 1px solid var(--border);
       display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
     }
-
+ 
     .play-icon {
       width: 64px; height: 64px;
       border-radius: 50%;
@@ -295,11 +295,11 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 1.5rem; color: var(--accent);
     }
-
+ 
     .video-placeholder p { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--muted); text-align: center; line-height: 1.6; }
-
+ 
     .pptx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-
+ 
     .pptx-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -309,51 +309,51 @@
       color: inherit;
       display: block;
     }
-
+ 
     .pptx-card:hover { border-color: var(--accent); transform: translate(-3px, -3px); }
-
+ 
     .pptx-num { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.12em; margin-bottom: 1.2rem; }
     .pptx-card h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: 0.6rem; }
     .pptx-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; }
     .pptx-meta { display: flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.7rem; color: var(--accent2); }
-
+ 
     #project { background: var(--surface); }
-
+ 
     .project-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: start; }
-
+ 
     .project-card { background: var(--bg); border: 1px solid var(--border); }
-
+ 
     .project-card-header { padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.6rem; }
-
+ 
     .dot { width: 10px; height: 10px; border-radius: 50%; }
     .dot-r { background: #ff5f57; }
     .dot-y { background: #ffbd2e; }
     .dot-g { background: #28c940; }
-
+ 
     .project-card-body { padding: 2rem; font-family: var(--mono); font-size: 0.82rem; color: var(--accent2); line-height: 1.9; }
     .project-card-body .comment { color: var(--muted); }
     .project-card-body .keyword { color: var(--accent); }
     .project-card-body .string { color: #ff9d4e; }
-
+ 
     .project-info h3 { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 1rem; }
     .project-info p { color: var(--muted); line-height: 1.7; margin-bottom: 1.5rem; }
-
+ 
     .tech-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
     .tech-badge { font-family: var(--mono); font-size: 0.7rem; background: var(--bg); border: 1px solid var(--border); color: var(--accent); padding: 0.3rem 0.8rem; letter-spacing: 0.07em; }
-
+ 
     footer { border-top: 1px solid var(--border); padding: 3rem 5rem; display: flex; align-items: center; justify-content: space-between; }
     .footer-left { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
     .footer-links { display: flex; gap: 1.5rem; }
     .footer-links a { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
     .footer-links a:hover { color: var(--accent); }
-
+ 
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     .fade-up { animation: fadeUp 0.7s ease both; }
     .delay-1 { animation-delay: 0.15s; }
     .delay-2 { animation-delay: 0.3s; }
     .delay-3 { animation-delay: 0.45s; }
     .delay-4 { animation-delay: 0.6s; }
-
+ 
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
@@ -371,7 +371,7 @@
   </style>
 </head>
 <body>
-
+ 
   <nav>
     <span class="nav-logo">Mario · Portfolio</span>
     <ul class="nav-links">
@@ -381,7 +381,7 @@
       <li><a href="#project">Group Project</a></li>
     </ul>
   </nav>
-
+ 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
@@ -393,8 +393,7 @@
       </p>
       <div class="hero-cta fade-up delay-3">
         <a href="#about" class="btn-primary">View Portfolio</a>
-        <!-- Change href to your actual CV file -->
-        <a href="cv.pdf" class="btn-outline" download>Download CV</a>
+        <a href="Mario Fz Resume.pdf" class="btn-outline" download>Download CV</a>
       </div>
     </div>
     <div class="hero-right">
@@ -422,7 +421,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- ABOUT -->
   <div id="about">
     <div class="about-left">
@@ -450,7 +449,7 @@
         <span class="skill-tag">Git</span>
       </div>
     </div>
-
+ 
     <div class="about-right">
       <div class="cv-card">
         <h3>Mario</h3>
@@ -471,12 +470,11 @@
           <span class="cv-row-label">Program</span>
           <span class="cv-row-val">Computer Programming Diploma</span>
         </div>
-        <!-- Change href to your actual CV file -->
-        <a href="cv.pdf" download class="btn-primary cv-download">⬇ Download Full Resume</a>
+        <a href="Mario Fz Resume.pdf" download class="btn-primary cv-download">⬇ Download Full Resume</a>
       </div>
     </div>
   </div>
-
+ 
   <!-- ELEVATOR PITCH -->
   <section id="pitch">
     <div class="section-header">
@@ -502,22 +500,18 @@
           - YouTube:      https://www.youtube.com/embed/YOUR_VIDEO_ID
           - Google Drive: https://drive.google.com/file/d/YOUR_FILE_ID/preview
           - Local file:   <video src="pitch.mp4" controls style="width:100%"></video>
-
+ 
           EXAMPLE (YouTube — uncomment and change the ID):
           <div class="video-wrapper">
             <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
               frameborder="0" allowfullscreen></iframe>
           </div>
         -->
-        <div class="video-placeholder">
-          <div class="play-icon">▶</div>
-          <p>Upload your video to YouTube or Google Drive<br>and paste the embed link here.<br>
-          <span style="color:var(--accent);margin-top:0.5rem;display:block;">See instructions in the code</span></p>
-        </div>
+        <video src="WhatsApp Video 2026-02-27 at 4.15.19 PM.mp4" controls style="width:100%;border:1px solid var(--border);"></video>
       </div>
     </div>
   </section>
-
+ 
   <!-- PRESENTATIONS -->
   <section id="presentations">
     <div class="section-header">
@@ -531,7 +525,7 @@
         - Upload .pptx to Google Drive → Share → "Anyone with the link" → copy link
         - Or place the file in the repo folder and use its filename as the href
       -->
-      <a href="presentation1.pptx" class="pptx-card" target="_blank">
+      <a href="Sharepoint_Presentation.pptx" class="pptx-card" target="_blank">
         <p class="pptx-num">Presentation 01</p>
         <h3>Microsoft SharePoint</h3>
         <p>
@@ -543,15 +537,13 @@
           <span>View / Download PowerPoint</span>
         </div>
       </a>
-
-      <a href="presentation2.pptx" class="pptx-card" target="_blank">
+ 
+      <a href="Boxing Presentation Mario - MIT207 (1).pptx" class="pptx-card" target="_blank">
         <p class="pptx-num">Presentation 02</p>
-        <!-- Add your second presentation title here -->
-        <h3>Second Presentation</h3>
+        <h3>Boxing</h3>
         <p>
-          <!-- Add the description of your second presentation here -->
-          Description of the second presentation delivered during the semester.
-          Topic, objective, and key takeaways.
+          Personal presentation on boxing delivered as part of MIT207.
+          Covers history, technique, and key aspects of the sport.
         </p>
         <div class="pptx-meta">
           <span>📎</span>
@@ -560,14 +552,14 @@
       </a>
     </div>
   </section>
-
+ 
   <!-- GROUP PROJECT -->
   <section id="project">
     <div class="section-header">
       <span class="section-num">04</span>
       <h2>Group <em>Project</em></h2>
     </div>
-
+ 
     <!-- Company logo -->
     <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:3rem;">
       <!--
@@ -582,9 +574,9 @@
         <h3 style="font-family:var(--serif);font-size:1.6rem;">Your Company Name</h3>
       </div>
     </div>
-
+ 
     <div class="project-layout">
-
+ 
       <!-- PDF cards -->
       <div style="display:flex;flex-direction:column;gap:1.5rem;">
         <!--
@@ -592,31 +584,26 @@
           to the actual filenames of your PDFs.
           Also update the titles and descriptions.
         -->
-        <a href="document1.pdf" class="pptx-card" target="_blank" style="display:block;">
+        <a href="group project .zip" class="pptx-card" target="_blank" style="display:block;">
           <p class="pptx-num">Document 01</p>
-          <!-- Change this title -->
-          <h3 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:0.5rem;">Business Plan</h3>
+          <h3 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:0.5rem;">Project Files</h3>
           <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;margin-bottom:1.2rem;">
-            <!-- Describe what this PDF covers -->
-            Overview of the company concept, mission, target market, and AI integration strategy
-            developed collaboratively with a team of three.
+            Complete project files including documentation, assets, and deliverables
+            developed collaboratively with a team of three using AI tools.
           </p>
-          <div class="pptx-meta"><span>📄</span><span>View PDF</span></div>
+          <div class="pptx-meta"><span>📦</span><span>Download Project (.zip)</span></div>
         </a>
-
-        <a href="document2.pdf" class="pptx-card" target="_blank" style="display:block;">
+ 
+        <div class="pptx-card" style="opacity:0.4;cursor:default;">
           <p class="pptx-num">Document 02</p>
-          <!-- Change this title -->
-          <h3 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:0.5rem;">Company Report</h3>
+          <h3 style="font-family:var(--serif);font-size:1.4rem;margin-bottom:0.5rem;">Coming Soon</h3>
           <p style="color:var(--muted);font-size:0.9rem;line-height:1.6;margin-bottom:1.2rem;">
-            <!-- Describe what this PDF covers -->
-            Detailed report covering the company structure, AI tools used, results,
-            and individual contributions from each team member.
+            Upload your second PDF to GitHub and update this link.
           </p>
-          <div class="pptx-meta"><span>📄</span><span>View PDF</span></div>
-        </a>
+          <div class="pptx-meta"><span>📄</span><span>Not yet available</span></div>
+        </div>
       </div>
-
+ 
       <!-- Project info -->
       <div class="project-info">
         <h3>About the Project</h3>
@@ -644,20 +631,20 @@
           <span class="tech-badge">Branding</span>
         </div>
       </div>
-
+ 
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer>
     <p class="footer-left">© 2025 Mario · Computer Programming · St. Clair College</p>
     <div class="footer-links">
-      <!-- Change these to your real profile links -->
-      <a href="https://github.com/YOUR_USERNAME" target="_blank">GitHub</a>
+      <a href="https://github.com/MarioFdz04" target="_blank">GitHub</a>
       <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank">LinkedIn</a>
       <a href="mailto:YOUR@EMAIL.COM">Email</a>
     </div>
   </footer>
-
+ 
 </body>
 </html>
+ 
